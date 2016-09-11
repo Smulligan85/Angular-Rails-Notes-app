@@ -1,0 +1,12 @@
+<h1>Notes</h1>
+<ul>
+  <li ng-repeat="note in ctrl.notes">
+    <h3>{{ note.title }}</h3>
+      <p>
+        {{ note.body }}
+      </p>
+      <a href="#" ui-sref="home.show({id: note.id})">View Note</a>
+      <a href="#" ui-sref="home.edit({id: note.id})">Edit Note</a>
+      <a href ng-click="ctrl.deleteNote(note)">Delete Note</a>
+  </li>
+</ul>
